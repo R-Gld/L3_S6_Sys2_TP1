@@ -7,8 +7,8 @@
 #include <sys/ipc.h>
 #include <sys/shm.h>
 
-#define BORNE_SUP 50000
-#define BORNE_INF 50
+#define UPPER_BOUND 50000
+#define LOWER_BOUND 50
 
 int main() {
     const key_t key = ftok("./", 'h');
@@ -36,7 +36,7 @@ int main() {
     } else {
         // Child process
         srand(arc4random());
-        const int rn = BORNE_INF + random() % (BORNE_SUP - BORNE_INF + 1);
+        const int rn = LOWER_BOUND + random() % (UPPER_BOUND - LOWER_BOUND + 1);
         *shmPtr = rn;
         if (shmdt(shmPtr) == -1) { perror("shmdt"); return EXIT_FAILURE; }
     }
