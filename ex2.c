@@ -36,7 +36,7 @@ int main() {
     } else {
         // Child process
         srand(arc4random());
-        int rn = BORNE_INF + rand() % (BORNE_SUP - BORNE_INF + 1);
+        const int rn = BORNE_INF + random() % (BORNE_SUP - BORNE_INF + 1);
         *shmPtr = rn;
         if (shmdt(shmPtr) == -1) { perror("shmdt"); return EXIT_FAILURE; }
     }
