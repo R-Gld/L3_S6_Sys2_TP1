@@ -27,8 +27,8 @@ int main() {
         int status;
         if (waitpid(pid, &status, 0) == -1) { perror("waitpid"); return EXIT_FAILURE; }
         if (WIFEXITED(status)) {
-            int value = *shmPtr;
-            double pow = value * value;
+            const int value = *shmPtr;
+            const double pow = value * value;
             printf("%d^2 = %lf\n", value, pow);
         }
 
