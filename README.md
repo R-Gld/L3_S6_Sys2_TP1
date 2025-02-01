@@ -1,3 +1,4 @@
+[![CMake on Ubuntu (W/ gcc & clang) & Macos (W/ clang)](https://github.com/R-Gld/L3_S6_Sys2_TP1/actions/workflows/cmake-multi-platform.yml/badge.svg)](https://github.com/R-Gld/L3_S6_Sys2_TP1/actions/workflows/cmake-multi-platform.yml)
 # L3 S6 - 1st Système 2 TP
 
 ## Usage
